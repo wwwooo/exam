@@ -1,0 +1,10 @@
+$image_dir: '../img/';
+
+.header {
+    background: url($image_dir + 'h-bg.jpg')
+}
+
+.wrap {
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+}

@@ -1,0 +1,26 @@
+$color-white: #fff;
+
+.header {
+    background-color: #000;
+
+    .wrap {
+        height: 540px;
+        width: 320px;
+        margin: 0 auto;
+        color: $color-white;
+    }
+
+    .header__logo {
+        display: block;
+        padding-top: 50px;
+        color: $color-white;
+        font-size: 20px;
+    }
+
+    .header__link {
+        padding: 10px;
+        border: 2px solid #fff;
+        border-radius: 10px;
+        color: $color-white;
+    }
+}
