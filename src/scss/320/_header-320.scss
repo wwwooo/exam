@@ -1,26 +1,27 @@
-$color-white: #fff;
-
 .header {
-    background-color: #000;
+    padding-top: 20px;
+    background-image: url($image_dir + 'h-bg.jpg');
 
     .wrap {
         height: 540px;
-        width: 320px;
-        margin: 0 auto;
-        color: $color-white;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .header__sign_in {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
     }
 
     .header__logo {
         display: block;
-        padding-top: 50px;
-        color: $color-white;
-        font-size: 20px;
+        padding-top: 100px;
     }
 
-    .header__link {
-        padding: 10px;
-        border: 2px solid #fff;
-        border-radius: 10px;
-        color: $color-white;
+    .header__offer {
+        margin: 20px 0;
     }
 }

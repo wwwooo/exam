@@ -4,6 +4,7 @@
   "devDependencies": {
     "browser-sync": "^2.17.3",
     "gulp": "3.9.1",
+    "gulp-csscomb": "^3.0.8",
     "gulp-imagemin": "^3.0.3",
     "gulp-sass": "^2.3.2"
   }

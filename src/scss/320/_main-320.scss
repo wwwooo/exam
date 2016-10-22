@@ -1,3 +1,8 @@
 @media screen and (max-width: 747px) {
+    .wrap {
+        width: 320px;
+    }
+
     @import "_header-320";
+    @import "_how-it-works-320"
 }

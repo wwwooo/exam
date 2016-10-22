@@ -5,21 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
     <title>Ксения Малиновская</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="sass" href="../src/scss/_default.scss">
+    <link rel="sass" href="../src/scss/320/_header-320.scss">
     <script src="js/main.js"></script>
 </head>
 <body>
     <header class="header">
         <div class="wrap">
-            <div class="header__sign-in">
+            <div class="header__sign_in">
                 <a class="header__link" href="#">Log in</a>
                 <a class="header__link" href="#">Sign up</a>
             </div>
             <h1><a class="header__logo" href="#">URLAUBSGLÜCK</a></h1>
-            <p class="header__offer">Share your holiday dreams <span>And find the perfect partner to fullfill it</span></p>
-            <a class="header__link" href="#">Find your holiday partner</a>
+            <div class="header__offer">Share your holiday dreams <span class="header__offer-thin">And find the perfect partner to fullfill it</span></div>
+            <a class="header__link header__link-offer" href="#">Find your holiday partner</a>
         </div>
     </header>
+    <section class="h-it-w">
+        <div class="wrap">
+            <h1 class="h-it-w__title">How Urlaubsglück works?</h1>
+            <article class="h-it-w__step h-it-w__step-1">
+                <span class="h-it-w__step-numb">STEP 1</span>
+                <h1 class="h-it-w__article-title">
+                    Sed leo enim, condimentum
+                </h1>
+                <p class="h-it-w__article-paragraph">
+                    Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.
+                </p>
+            </article>
+            <article class="h-it-w__step h-it-w__step-2">
+                <span class="h-it-w__step-numb">STEP 2</span>
+                <h1 class="h-it-w__article-title">
+                    Morbi velit risus
+                </h1>
+                <p class="h-it-w__article-paragraph">
+                    Nulla venenatis tempor dui in molestie. Nulla quis dictum purus, sit amet porttitor est.
+                </p>
+            </article>
+            <article class="h-it-w__step h-it-w__step-3">
+                <span class="h-it-w__step-numb">STEP 3</span>
+                <h1 class="h-it-w__article-title">
+                    Sed leo enim, condimentum
+                </h1>
+                <p class="h-it-w__article-paragraph">
+                    Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.
+                </p>
+            </article>
+        </div>
+    </section>
 </body>
 </html>

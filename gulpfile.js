@@ -3,35 +3,37 @@
 const gulp = require('gulp'),
     sass = require('gulp-sass'),
     imagemin = require('gulp-imagemin'),
-    browserSync = require("browser-sync"),
-    reload = browserSync.reload;
+    csscomb = require('gulp-csscomb'),
+    browserSync = require("browser-sync").create();
 
 gulp.task('sass', function() {
     return gulp.src('src/scss/main.scss')
         .pipe(sass().on('error', sass.logError))
+        .pipe(csscomb('csscomb.json'))
         .pipe(gulp.dest('dist/css'))
-        .pipe(reload({stream: true}));
+        .pipe(browserSync.stream());
 });
 
 gulp.task('imagemin', function() {
     return gulp.src('src/img/*.jpg')
         .pipe(imagemin())
         .pipe(gulp.dest('dist/img'))
-        .pipe(reload({stream: true}));
+        .pipe(browserSync.stream());
 });
 
-gulp.task('browser-sync', function() {
-	browserSynk({
-		server: {
-			baseDir: 'app'
-		},
-		notify: false
-	});
+gulp.task('serve', ['sass'], function() {
+
+    browserSync.init({
+        server: "./dist"
+    });
+
+    gulp.watch("src/scss/**/*.scss", ['sass']);
+    gulp.watch("dist/*.html").on('change', browserSync.reload);
 });
 
 gulp.task('sass:watch', function() {
-  gulp.watch('src/scss/*/*.scss', ['sass']);
-  gulp.watch('app/*.html', reload);
+  gulp.watch('src/scss/**/*.scss', ['sass']);
+  gulp.watch('css/main.css', reload);
 });
 
-//gulp.task('default', ['sass, sass:watch']);
+gulp.task('default', ['serve']);
