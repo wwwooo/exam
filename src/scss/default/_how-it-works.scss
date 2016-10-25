@@ -1,6 +1,6 @@
 .h-it-w {
     .h-it-w__title {
-        font-size: 50px;
+        font-size: 22px;
     }
 
     .h-it-w__step {
@@ -18,5 +18,10 @@
         &.h-it-w__step-3 {
             background: #000 url($image_dir + 'h-it-w-3.jpg');
         }
+    }
+
+    .h-it-w__article-title {
+        font-size: 24px;
+        color: $color-white;
     }
 }

@@ -42,6 +42,29 @@ body {
     border-color: #ff4e50;
 }
 
+.h-it-w .h-it-w__title {
+    font-size: 22px;
+}
+
+.h-it-w .h-it-w__step {
+    width: 300px;
+    height: 240px;
+}
+.h-it-w .h-it-w__step.h-it-w__step-1 {
+    background: #000 url('../img/h-it-w-1.jpg');
+}
+.h-it-w .h-it-w__step.h-it-w__step-2 {
+    background: #000 url('../img/h-it-w-2.jpg');
+}
+.h-it-w .h-it-w__step.h-it-w__step-3 {
+    background: #000 url('../img/h-it-w-3.jpg');
+}
+
+.h-it-w .h-it-w__article-title {
+    font-size: 24px;
+    color: #fff;
+}
+
 @media screen and (max-width: 747px) {
     .wrap {
         width: 320px;
