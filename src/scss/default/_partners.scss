@@ -1,0 +1,37 @@
+.partners {
+    text-align: center;
+}
+
+.partners__title {
+    //width: 300px;
+    font: 700 22px $main-font, sans-serif;
+}
+
+.partner {
+    margin: 25px 0;
+    text-align: center;
+}
+
+.partner__photo {
+    border-radius: 50%;
+}
+
+.partner__name {
+    margin: 10px 0;
+    font: 700 14px $main-font, sans-serif;
+}
+
+.partner__info {
+    width: 250px;
+    margin: 0 auto;;
+    font: 300 14px $secondary-font, sans-serif;
+    color: #8f8f8f;
+}
+
+.partners__link {
+    padding: 8px 70px;
+    border: 2px solid $color-pink;
+    border-radius: 20px;
+    font: 700 14px $main-font, sans-serif;
+    color: $color-pink;
+}

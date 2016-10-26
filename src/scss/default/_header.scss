@@ -1,47 +1,46 @@
+.wrap {
+    margin: 0 auto;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+}
+
 .header {
     background: #000;
+}
 
-    .wrap {
-        margin: 0 auto;
-        border-left: 1px solid #000;
-        border-right: 1px solid #000;
-        color: $color-white;
+.header__logo {
+    color: $color-white;
+}
+
+.header__link {
+    padding: 10px 15px;
+    font-size: 14px;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    color: $color-white;
+
+    &:hover {
+        border: 2px solid $color-white;
     }
+}
 
-    .header__logo {
-        color: $color-white;
-    }
+.header__offer {
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
 
-    .header__link {
-        padding: 10px 15px;
-        font-size: 14px;
-        border: 2px solid transparent;
-        border-radius: 20px;
-        color: $color-white;
+.header__offer-thin {
+    display: block;
+    font: 18px $secondary-font, sans-serif;
+    text-transform: none;
+}
 
-        &:hover {
-            border: 2px solid $color-white;
-        }
-    }
+.header__link-offer {
+    border-color: $color-pink;
+    background: $color-pink;
 
-    .header__offer {
-        font-size: 30px;
-        text-align: center;
-        text-transform: uppercase;
-    }
-
-    .header__offer-thin {
-        display: block;
-        font: 18px $secondary-font, sans-serif;
-        text-transform: none;
-    }
-
-    .header__link-offer {
+    &:hover {
         border-color: $color-pink;
-        background: $color-pink;
-
-        &:hover {
-            border-color: $color-pink;
-        }
     }
 }

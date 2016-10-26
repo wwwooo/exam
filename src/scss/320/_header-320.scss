@@ -1,27 +1,27 @@
 .header {
     padding-top: 20px;
     background-image: url($image_dir + 'h-bg.jpg');
+}
 
-    .wrap {
-        height: 540px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-    }
+.header__wrap {
+    height: 540px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
 
-    .header__sign_in {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
+.header__sign_in {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 
-    .header__logo {
-        display: block;
-        padding-top: 100px;
-    }
+.header__logo {
+    display: block;
+    padding-top: 100px;
+}
 
-    .header__offer {
-        margin: 20px 0;
-    }
+.header__offer {
+    margin: 20px 0;
 }
