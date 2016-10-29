@@ -15,7 +15,7 @@ gulp.task('sass', function() {
 });
 
 gulp.task('imagemin', function() {
-    return gulp.src('src/img/*.jpg')
+    return gulp.src('src/img/*')
         .pipe(imagemin())
         .pipe(gulp.dest('dist/img'))
         .pipe(browserSync.stream());
@@ -24,7 +24,8 @@ gulp.task('imagemin', function() {
 gulp.task('serve', ['sass'], function() {
 
     browserSync.init({
-        server: "./dist"
+        server: "./dist",
+        ghostMode: false
     });
 
     gulp.watch("src/scss/**/*.scss", ['sass']);

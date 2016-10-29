@@ -1,0 +1,27 @@
+.search-partners {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.search-partners__title {
+    @include font-family-Montserrat(700, 22px);
+}
+
+.search-partners__subtitle {
+    font: 300 18px $secondary-font;
+}
+
+.search-partners__input {
+    margin: 10px 0;
+    padding: 5px 10px;
+    width: 270px;
+    height: 30px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    color: #aaa;
+    font: 300 14px $secondary-font;
+}
+
+.search-partners__btn {
+    width: 280px;
+}

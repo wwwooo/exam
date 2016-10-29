@@ -5,13 +5,12 @@
 .h-it-w__title {
     margin: 10px 0;
     font-size: 22px;
+    font-weight: 700;
     text-align: center;
+    color: #000;
 }
 
 .h-it-w__step {
-    margin: 10px auto;
-    width: 300px;
-    height: 240px;
     font-weight: 300;
 
     &.h-it-w__step-1 {
@@ -35,10 +34,9 @@
 }
 
 .h-it-w__article-title {
-    font-size: 24px;
-    font-weight: 700;
+    @include font-family-Montserrat(700, 24px);
 }
 
 .h-it-w__article-paragraph {
-    font: 300 14px $secondary-font, sans-serif;
+    @include font-family-Roboto(300, 14px);
 }

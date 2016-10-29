@@ -1,0 +1,26 @@
+.header__wrap {
+    position: relative;
+    height: 700px;
+    text-align: center;
+}
+
+.header__sign_in {
+    position: absolute;
+    top: 100px;
+    right: 150px;
+}
+
+.header__logo {
+    position: absolute;
+    top: 100px;
+    left: 150px;
+}
+
+.header__offer {
+    font-size: 52px;
+    padding: 250px 0 0;
+}
+
+.header__offer-thin {
+    margin: 50px 0;
+}

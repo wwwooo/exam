@@ -1,4 +1,4 @@
-@media screen and (max-width: 939px) {
+@media screen and (min-width: 768px) and (max-width: 939px) {
     .wrap {
         width: 748px;
     }
@@ -6,4 +6,6 @@
     @import "_header-768";
     @import "_how-it-works-768";
     @import "_partners-768";
+    @import "_search-partners-768";
+    @import "_footer-768";
 }

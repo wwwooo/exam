@@ -1,0 +1,33 @@
+.footer {
+    margin-bottom: 50px;
+}
+
+.footer__wrap {
+    border-top: 5px solid $color-pink;
+    text-align: center;
+}
+
+.footer__logo {
+    @include font-family-Montserrat(700, 16px);
+    color: $color-pink;
+}
+
+.footer__nav-title {
+    @include font-family-Montserrat(700, 14px);
+}
+
+.footer__nav-item {
+    display: inline-block;
+    @include font-family-Roboto(300, 14px);
+}
+
+.footer__designed-text {
+    @include font-family-Montserrat(700, 10px);
+    text-transform: uppercase;
+    color: #aaa;
+}
+
+.footer__designed-logo {
+    display: block;
+    margin: 0 auto;
+}

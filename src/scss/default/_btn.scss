@@ -1,0 +1,12 @@
+.btn {
+    padding: 10px 15px;
+    border: 2px solid $color-pink;
+    border-radius: 20px;
+    @include font-family-Montserrat(700, 14px);
+    background: $color-pink;
+    color: $color-white;
+
+    &:hover {
+        border: 2px solid $color-white;
+    }
+}

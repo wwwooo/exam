@@ -1,7 +1,11 @@
 body {
-    font: 20px $main-font, sans-serif;
+    @include font-family-Montserrat;
+    box-sizing: border-box;
 }
 
+@import "_btn";
 @import "_header";
 @import "_how-it-works";
-@import "_partners.scss";
+@import "_partners";
+@import "_search-partners";
+@import "_footer";

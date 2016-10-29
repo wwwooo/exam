@@ -5,23 +5,21 @@
 }
 
 .header {
-    background: #000;
-}
-
-.header__logo {
+    background: #000 url($image_dir + 'h-bg.jpg') fixed;
     color: $color-white;
 }
 
 .header__link {
-    padding: 10px 15px;
-    font-size: 14px;
-    border: 2px solid transparent;
-    border-radius: 20px;
-    color: $color-white;
+    border-color: transparent;
+    background: transparent;
 
     &:hover {
         border: 2px solid $color-white;
     }
+}
+
+.header__logo {
+    color: $color-white;
 }
 
 .header__offer {
@@ -32,15 +30,15 @@
 
 .header__offer-thin {
     display: block;
-    font: 18px $secondary-font, sans-serif;
+    @include font-family-Roboto(300, 18px);
     text-transform: none;
 }
 
-.header__link-offer {
+.btn-find-partner {
     border-color: $color-pink;
     background: $color-pink;
 
     &:hover {
-        border-color: $color-pink;
+        border-color: $color-white;
     }
 }
