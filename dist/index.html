@@ -7,81 +7,149 @@
     <title>Ксения Малиновская</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="sass" href="../src/scss/_default.scss">
     <link rel="sass" href="../src/scss/320/_header-320.scss">
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
     <script src="js/main.js"></script>
 </head>
 <body>
     <header class="header">
         <div class="header__wrap wrap">
-            <div class="header__sign_in">
+            <div class="header__sign-in">
                 <a class="header__link btn" href="#">Log in</a>
                 <a class="header__link btn" href="#">Sign up</a>
             </div>
             <h1><a class="header__logo" href="#">URLAUBSGLÜCK</a></h1>
-            <div class="header__offer">Share your holiday dreams <span class="header__offer-thin">And find the perfect partner to fullfill it</span></div>
+            <div class="header__offer">Share your holiday dreams <span class="header__offer_thin">And find the perfect partner to fullfill it</span></div>
             <a class="header__find-partner btn" href="#find-partner">Find your holiday partner</a>
         </div>
     </header>
-    <section class="h-it-w">
-        <h1 class="h-it-w__title">How Urlaubsglück works?</h1>
-        <div class="h-it-w__wrap wrap">
-            <article class="h-it-w__step h-it-w__step-1">
-                <span class="h-it-w__step-numb">STEP 1</span>
-                <h1 class="h-it-w__article-title">
-                    Sed leo enim, condimentum
-                </h1>
-                <p class="h-it-w__article-paragraph">
-                    Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.
-                </p>
-            </article>
-            <article class="h-it-w__step h-it-w__step-2">
-                <span class="h-it-w__step-numb">STEP 2</span>
-                <h1 class="h-it-w__article-title">
-                    Morbi velit risus
-                </h1>
-                <p class="h-it-w__article-paragraph">
-                    Nulla venenatis tempor dui in molestie. Nulla quis dictum purus, sit amet porttitor est.
-                </p>
-            </article>
-            <article class="h-it-w__step h-it-w__step-3">
-                <span class="h-it-w__step-numb">STEP 3</span>
-                <h1 class="h-it-w__article-title">
-                    Sed leo enim, condimentum
-                </h1>
-                <p class="h-it-w__article-paragraph">
-                    Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.
-                </p>
-            </article>
+    <div class="h-it-w">
+        <div class="wrap">
+            <h1 class="h-it-w__title">How Urlaubsglück works?</h1
         </div>
-    </section>
+        <div class="h-it-w__wrap wrap">
+            <ul class="h-it-w__section h-it-w__section-1 jcarousel">
+                <li class="h-it-w__step h-it-w__step-1">
+                    <span class="h-it-w__step-numb btn">STEP 1</span>
+                    <h1 class="h-it-w__step-title">
+                        Sed leo enim, condimentum
+                    </h1>
+                    <p class="h-it-w__step-paragraph">
+                        Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.
+                    </p>
+                </li>
+                <li class="h-it-w__step h-it-w__step-2">
+                    <span class="h-it-w__step-numb btn">STEP 2</span>
+                    <h1 class="h-it-w__step-title">
+                        Morbi velit risus
+                    </h1>
+                    <p class="h-it-w__step-paragraph">
+                        Nulla venenatis tempor dui in molestie. Nulla quis dictum purus, sit amet porttitor est.
+                    </p>
+                </li>
+                <li class="h-it-w__step h-it-w__step-3">
+                    <span class="h-it-w__step-numb btn">STEP 3</span>
+                    <h1 class="h-it-w__step-title">
+                        Sed leo enim, condimentum
+                    </h1>
+                    <p class="h-it-w__step-paragraph">
+                        Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.
+                    </p>
+                </li>
+            </ul>
+
+            <ul class="h-it-w__section h-it-w__section-2 jcarousel">
+                <li class="h-it-w__step h-it-w__step-1">
+                    <span class="h-it-w__step-numb btn">STEP 1</span>
+                    <h1 class="h-it-w__step-title">
+                        Sed leo enim, condimentum
+                    </h1>
+                    <p class="h-it-w__step-paragraph">
+                        Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.
+                    </p>
+                </li>
+                <li class="h-it-w__step h-it-w__step-2">
+                    <span class="h-it-w__step-numb btn">STEP 2</span>
+                    <h1 class="h-it-w__step-title">
+                        Morbi velit risus
+                    </h1>
+                    <p class="h-it-w__step-paragraph">
+                        Nulla venenatis tempor dui in molestie. Nulla quis dictum purus, sit amet porttitor est.
+                    </p>
+                </li>
+                <li class="h-it-w__step h-it-w__step-3">
+                    <span class="h-it-w__step-numb btn">STEP 3</span>
+                    <h1 class="h-it-w__step-title">
+                        Sed leo enim, condimentum
+                    </h1>
+                    <p class="h-it-w__step-paragraph">
+                        Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.
+                    </p>
+                </li>
+            </ul>
+
+            <ul class="h-it-w__section h-it-w__section-3 jcarousel">
+                <li class="h-it-w__step h-it-w__step-1">
+                    <span class="h-it-w__step-numb btn">STEP 1</span>
+                    <h1 class="h-it-w__step-title">
+                        Sed leo enim, condimentum
+                    </h1>
+                    <p class="h-it-w__step-paragraph">
+                        Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.
+                    </p>
+                </li>
+                <li class="h-it-w__step h-it-w__step-2">
+                    <span class="h-it-w__step-numb btn">STEP 2</span>
+                    <h1 class="h-it-w__step-title">
+                        Morbi velit risus
+                    </h1>
+                    <p class="h-it-w__step-paragraph">
+                        Nulla venenatis tempor dui in molestie. Nulla quis dictum purus, sit amet porttitor est.
+                    </p>
+                </li>
+                <li class="h-it-w__step h-it-w__step-3">
+                    <span class="h-it-w__step-numb btn">STEP 3</span>
+                    <h1 class="h-it-w__step-title">
+                        Sed leo enim, condimentum
+                    </h1>
+                    <p class="h-it-w__step-paragraph">
+                        Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
     <section class="partners">
         <h1 class="partners__title">Meet a partner for your best holiday</h1>
         <div class="partners__wrap wrap">
-            <aside class="partners__partner partner">
+            <aside class="partner">
                 <img class="partner__photo partner__photo_1" src="img/partner-1.jpg" alt="">
                 <h1 class="partner__name">Bradley Hunter</h1>
                 <p class="partner__info">
                     Based in Chicago. I love playing tennis and loud music.
                 </p>
             </aside>
-            <aside class="partners__partner partner">
+            <aside class="partner">
                 <img class="partner__photo partner__photo_2" src="img/partner-2.jpg" alt="">
                 <h1 class="partner__name">Lucas Marsha</h1>
                 <p class="partner__info">
                     I get my inspiration from nature and objects around me. I have a passion to colours, typography and skateboards.
                 </p>
             </aside>
-            <aside class="partners__partner partner">
+            <aside class="partner">
                 <img class="partner__photo partner__photo_3" src="img/partner-3.jpg" alt="">
                 <h1 class="partner__name">Heather Walker</h1>
                 <p class="partner__info">
                     I'm a happy person that loves cats and climbing on mountains.
                 </p>
             </aside>
-            <aside class="partners__partner partner">
+            <aside class="partner">
                 <img class="partner__photo partner__photo_4" src="img/partner-4.jpg" alt="">
                 <h1 class="partner__name">Bradley Hunter</h1>
                 <p class="partner__info">
@@ -111,7 +179,9 @@
                     <li class="footer__nav-item">Blog</li>
                 </ul>
             </nav>
-            <h3 class="footer__nav-title">Partners</h3>
+            <nav class="footer__nav">
+                <h3 class="footer__nav-title">Partners</h3>
+            </nav>
             <div class="footer__designed">
                 <span class="footer__designed-text">designed by</span>
                 <a href="#"><img src="img/designer-logo.png" class="footer__designed-logo" alt=""></a>

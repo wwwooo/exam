@@ -1,16 +1,10 @@
-.header {
-    padding-top: 20px;
-}
-
 .header__wrap {
     height: 540px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    text-align: center;
 }
 
-.header__sign_in {
+.header__sign-in {
+    padding-top: 20px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -18,9 +12,13 @@
 
 .header__logo {
     display: block;
-    padding-top: 100px;
+    margin: 110px 0 22px;
 }
 
-.header__offer {
-    margin: 20px 0;
+.header__offer_thin {
+    margin: 10px 50px;
+}
+
+.header__find-partner {
+    width: 280px;
 }

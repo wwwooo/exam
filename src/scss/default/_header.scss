@@ -1,9 +1,3 @@
-.wrap {
-    margin: 0 auto;
-    border-left: 1px solid #000;
-    border-right: 1px solid #000;
-}
-
 .header {
     background: #000 url($image_dir + 'h-bg.jpg') fixed;
     color: $color-white;
@@ -19,6 +13,7 @@
 }
 
 .header__logo {
+    @include font-family-Montserrat;
     color: $color-white;
 }
 
@@ -28,16 +23,14 @@
     text-transform: uppercase;
 }
 
-.header__offer-thin {
+.header__offer_thin {
     display: block;
-    @include font-family-Roboto(300, 18px);
     text-transform: none;
+    @include font-family-Roboto(300, 18px);
 }
 
-.btn-find-partner {
-    border-color: $color-pink;
-    background: $color-pink;
-
+.header__find-partner {
+    display: inline-block;
     &:hover {
         border-color: $color-white;
     }

@@ -2,9 +2,11 @@
     padding: 10px 15px;
     border: 2px solid $color-pink;
     border-radius: 20px;
+    text-align: center;
     @include font-family-Montserrat(700, 14px);
     background: $color-pink;
     color: $color-white;
+    cursor: pointer;
 
     &:hover {
         border: 2px solid $color-white;

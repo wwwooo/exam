@@ -8,7 +8,8 @@
 }
 
 .partner {
-    margin: 25px 0;
+    margin: 25px auto;
+    width: 230px;
     text-align: center;
 }
 
@@ -22,13 +23,14 @@
 }
 
 .partner__info {
-    width: 250px;
+    width: 230px;
     margin: 0 auto;;
     font: 300 14px $secondary-font, sans-serif;
     color: #8f8f8f;
 }
 
 .partners__link {
+    display: inline-block;
     background: transparent;
     color: $color-pink;
 }

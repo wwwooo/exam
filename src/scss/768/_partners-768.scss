@@ -4,13 +4,13 @@
 
 .partners__wrap {
     padding: 0 100px;
-    height: 570px;
     display: flex;
-    flex-direction: column;
+    flex-direction: columns;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
 }
 
 .partners__link {
+    width: 250px;
 }
