@@ -11,10 +11,11 @@
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="sass" href="../src/scss/_default.scss">
-    <link rel="sass" href="../src/scss/320/_header-320.scss">
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4.1/dist/masonry.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+    <script src="js/tmpl.js"></script>
     <script src="js/main.js"></script>
 </head>
 <body>
@@ -30,9 +31,7 @@
         </div>
     </header>
     <div class="h-it-w">
-        <div class="wrap">
-            <h1 class="h-it-w__title">How Urlaubsglück works?</h1
-        </div>
+        <h1 class="h-it-w__title wrap">How Urlaubsglück works?</h1>
         <div class="h-it-w__wrap wrap">
             <ul class="h-it-w__section h-it-w__section-1 jcarousel">
                 <li class="h-it-w__step h-it-w__step-1">
@@ -159,12 +158,29 @@
         </div>
         <a class="partners__link btn" href="#">See other partners</a>
     </section>
+    <section id="discover-ideas" class="discover-ideas">
+        <div class="discover-ideas__wrap wrap">
+            <h1 class="discover-ideas__title">Discover holiday activity ideas</h1>
+            <!-- <div class="box">
+                <img class="img" src="http://placehold.it/350x150" alt="">
+                <img class="img" src="http://placehold.it/350x150" alt="">
+                <img class="img" src="http://placehold.it/350x200" alt="">
+                <img class="img" src="http://placehold.it/250x100" alt="">
+                <img class="img" src="http://placehold.it/350x150" alt="">
+                <img class="img" src="http://placehold.it/400x250" alt="">
+                <img class="img" src="http://placehold.it/350x200" alt="">
+                <img class="img" src="http://placehold.it/350x270" alt="">
+                <img class="img" src="http://placehold.it/350x300" alt="">
+                <img class="img" src="http://placehold.it/300x200" alt="">
+            </div> -->
+        </div>
+    </section>
     <form action="#" class="search-partners">
         <div class="search-partners__wrap wrap">
             <h1 class="search-partners__title">Discover holiday activity ideas</h1>
             <h3 class="search-partners__subtitle">Hi! What are your holiday interests?</h3>
-            <input type="text" class="search-partners__input" placeholder="Enter your interests">
-            <input type="button" class="search-partners__btn btn" value="Search partners">
+            <input type="text" id="search" class="search-partners__input" placeholder="Enter your interests">
+            <input type="button" id="search-btn" class="search-partners__btn btn" value="Search partners">
         </div>
     </form>
     <footer class="footer">
@@ -188,5 +204,17 @@
             </div>
         </div>
     </footer>
+    <script type="text/html" id="item_tmpl">
+        <div class="wrap">
+            <div class="discover-ideas__grid">
+                <% for (var i = 0; i < data.length; i++) { %>
+                    <div class="discover-ideas__item">
+                        <img class="discover-ideas__img" src=<%= data[i].imageurl %> alt="">
+                        <span class="discover-ideas__word"><%= data[i].word %></span>
+                    </div>
+                    <% } %>
+                </div>
+        </div>
+    </script>
 </body>
 </html>

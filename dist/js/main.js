@@ -11,17 +11,42 @@ $(function() {
         initialSlide: 2
     });
 
-    // var html = $('#item_tmpl').html();
-    // //console.log(html);
-    // var data = {
-    //     name: 'Малиновская Ксения Александровна',
-    //     work: 'Домохозяйка',
-    //     reasons: ['Хорошо оплачиваемая работа', 'Женщин в IT мало', 'Требует постоянного развития'],
-    //     login_skype: 'ksenia.malinovskaya',
-    //     link_facebook: 'https://www.facebook.com/malinovsvska',
-    //     feedback: 'Что посеешь, то из пруда'
-    // };
-    // var content = tmpl(html, data);
-    // console.log(content);
-    // $('body').append(content);
+    var search = document.getElementById('search');
+    var submit = document.getElementById('search-btn');
+    var content = document.getElementById('discover-ideas');
+    var request = new XMLHttpRequest();
+
+    var makeRequest = function(tag, callback, limit) {
+        limit = limit || 15;
+
+        request.open('GET', 'http://api.pixplorer.co.uk/image?word=' + tag + '&amount=' + limit);
+        request.onreadystatechange = function() {
+            if (request.status === 200 && request.readyState === 4) {
+                callback(JSON.parse(request.response));
+                console.log('request \n', request);
+                console.log('respons \n', request.response);
+
+            } else if (request.status !== 200) {
+                console.log('false request', request.status);
+            }
+        };
+        request.send();
+    };
+
+    submit.addEventListener('click', function() {
+        makeRequest(search.value, function(data) {
+            content.innerHTML = tmpl('item_tmpl', {data: data.images});
+
+            $('.discover-ideas__grid').imagesLoaded( function(){
+                $('.discover-ideas__grid').masonry({
+                    itemSelector: '.discover-ideas__item',
+                    columnWidth: 200,
+                    percentPosition: true,
+                    gutter: 20
+                })
+            });
+        });
+    });
+
+    submit.dispatchEvent(new Event('click'));
 });

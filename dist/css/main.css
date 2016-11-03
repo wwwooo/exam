@@ -148,6 +148,40 @@ body {
     color: #ff4e50;
 }
 
+.discover-ideas__grid {
+    padding: 0 50px;
+}
+
+.discover-ideas__grid::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.discover-ideas__item {
+    margin: 10px 0;
+    width: 200px;
+}
+
+.discover-ideas__img {
+    width: 200px;
+    border: 2px solid grey;
+}
+
+.discover-ideas__word {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+.img {
+    margin: 10px 0;
+    width: 300px;
+    border: 1px solid;
+}
+
 .search-partners {
     margin: 40px 0;
     text-align: center;
@@ -283,7 +317,7 @@ body {
         width: 230px;
     }
     .h-it-w__title {
-        margin: 95px 0 35px;
+        margin: 90px 0 35px;
     }
     .h-it-w__wrap {
         display: flex;
