@@ -149,13 +149,17 @@ body {
 }
 
 .discover-ideas__grid {
-    padding: 0 50px;
+    margin: 0 auto;
 }
 
 .discover-ideas__grid::after {
     content: '';
     display: block;
     clear: both;
+}
+
+.grid-sizer {
+    width: 220px;
 }
 
 .discover-ideas__item {

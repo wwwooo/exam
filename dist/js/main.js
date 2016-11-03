@@ -40,8 +40,9 @@ $(function() {
             $('.discover-ideas__grid').imagesLoaded( function(){
                 $('.discover-ideas__grid').masonry({
                     itemSelector: '.discover-ideas__item',
-                    columnWidth: 200,
+                    columnWidth: '.grid-sizer',
                     percentPosition: true,
+                    isFitWidth: true,
                     gutter: 20
                 })
             });
