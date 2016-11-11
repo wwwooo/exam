@@ -445,5 +445,12 @@ body {
         justify-content: space-between;
         align-items: center;
         flex-wrap: nowrap;
+        height: auto;
+    }
+    .footer__logo {
+        margin-left: 0;
+    }
+    .footer__designed {
+        right: 0;
     }
 }
