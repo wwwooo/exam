@@ -3,11 +3,10 @@
 }
 
 .partners__title {
-    font: 700 22px $main-font, sans-serif;
+    @include font-family-Montserrat(700, 22px);
 }
 
 .partner {
-    margin: 10px auto 25px;
     width: 230px;
     text-align: center;
 }
@@ -18,14 +17,14 @@
 
 .partner__name {
     margin: 10px 0;
-    font: 700 14px $main-font, sans-serif;
+    @include font-family-Montserrat(700, 14px);
 }
 
 .partner__info {
     width: 230px;
-    margin: 0 auto;;
-    font: 300 14px $secondary-font, sans-serif;
-    color: #8f8f8f;
+    margin: 0 auto;
+    @include font-family-Roboto(300, 14px);
+    color: $color-light-grey;
 }
 
 .partners__link {

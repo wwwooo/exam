@@ -1,16 +1,31 @@
 .partners {
-    margin: 70px 0;
+    margin: 70px 0 95px;
+}
+
+.partners__title {
+    margin-top: 98px;
 }
 
 .partners__wrap {
-    padding: 0 100px;
+    padding: 0 110px;
+    margin-top: 25px;
+    margin-bottom: 102px;
+    height: 430px;
     display: flex;
-    flex-direction: columns;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    flex-flow: column wrap;
+}
+
+.partner {
+    position: relative;
+}
+
+.partner__info {
+    position: absolute;
+    top: 170px;
 }
 
 .partners__link {
-    width: 250px;
+    width: 200px;
 }
