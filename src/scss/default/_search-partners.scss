@@ -9,12 +9,13 @@
 
 .search-partners__subtitle {
     font: 300 18px $secondary-font;
+    color: $color-dark-grey;
 }
 
 .search-partners__input {
     margin: 10px 0;
-    padding: 5px 10px;
-    width: 270px;
+    padding: 4px 15px;
+    width: 250px;
     height: 30px;
     border: 1px solid #aaa;
     border-radius: 5px;
@@ -24,4 +25,5 @@
 
 .search-partners__btn {
     width: 280px;
+    height: 40px;
 }

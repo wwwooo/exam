@@ -2,13 +2,9 @@
     color: $color-white;
 }
 
-.h-it-w__section {
-    width: 300px;
-}
-
 .h-it-w__title {
     display: block;
-    margin: 10px 0;
+    margin: 10px auto;
     text-align: center;
     @include font-family-Montserrat(700, 22px);
     color: #000;

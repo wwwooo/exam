@@ -14,12 +14,13 @@
 
 .footer__nav-item {
     @include font-family-Roboto(300, 14px);
+    color: $color-dark-grey;
 }
 
 .footer__designed-text {
     @include font-family-Montserrat(700, 10px);
     text-transform: uppercase;
-    color: #aaa;
+    color: $color-light-grey;
 }
 
 .footer__designed-logo {

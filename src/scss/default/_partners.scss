@@ -3,12 +3,11 @@
 }
 
 .partners__title {
-    //width: 300px;
     font: 700 22px $main-font, sans-serif;
 }
 
 .partner {
-    margin: 25px auto;
+    margin: 10px auto 25px;
     width: 230px;
     text-align: center;
 }
@@ -31,6 +30,7 @@
 
 .partners__link {
     display: inline-block;
+    width: 278px;
     background: transparent;
     color: $color-pink;
 }

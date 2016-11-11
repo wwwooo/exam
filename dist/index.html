@@ -125,7 +125,7 @@
         </div>
     </div>
     <section class="partners">
-        <h1 class="partners__title">Meet a partner for your best holiday</h1>
+        <h1 class="partners__title wrap">Meet a partner for your best holiday</h1>
         <div class="partners__wrap wrap">
             <aside class="partner">
                 <img class="partner__photo partner__photo_1" src="img/partner-1.jpg" alt="">
@@ -158,21 +158,10 @@
         </div>
         <a class="partners__link btn" href="#">See other partners</a>
     </section>
-    <section id="discover-ideas" class="discover-ideas">
+    <section class="discover-ideas">
         <div class="discover-ideas__wrap wrap">
             <h1 class="discover-ideas__title">Discover holiday activity ideas</h1>
-            <!-- <div class="box">
-                <img class="img" src="http://placehold.it/350x150" alt="">
-                <img class="img" src="http://placehold.it/350x150" alt="">
-                <img class="img" src="http://placehold.it/350x200" alt="">
-                <img class="img" src="http://placehold.it/250x100" alt="">
-                <img class="img" src="http://placehold.it/350x150" alt="">
-                <img class="img" src="http://placehold.it/400x250" alt="">
-                <img class="img" src="http://placehold.it/350x200" alt="">
-                <img class="img" src="http://placehold.it/350x270" alt="">
-                <img class="img" src="http://placehold.it/350x300" alt="">
-                <img class="img" src="http://placehold.it/300x200" alt="">
-            </div> -->
+            <div id="grid"></div>
         </div>
     </section>
     <form action="#" class="search-partners">
@@ -207,14 +196,13 @@
     <script type="text/html" id="item_tmpl">
         <div class="wrap">
             <div class="discover-ideas__grid">
-                <div class="grid-sizer"></div>
                 <% for (var i = 0; i < data.length; i++) { %>
                     <div class="discover-ideas__item">
                         <img class="discover-ideas__img" src=<%= data[i].imageurl %> alt="">
                         <span class="discover-ideas__word"><%= data[i].word %></span>
                     </div>
-                    <% } %>
-                </div>
+                <% } %>
+            </div>
         </div>
     </script>
 </body>

@@ -64,13 +64,9 @@ body {
     color: #fff;
 }
 
-.h-it-w__section {
-    width: 300px;
-}
-
 .h-it-w__title {
     display: block;
-    margin: 10px 0;
+    margin: 10px auto;
     text-align: center;
     font: 700 22px 'Montserrat', sans-serif;
     color: #000;
@@ -121,7 +117,7 @@ body {
 }
 
 .partner {
-    margin: 25px auto;
+    margin: 10px auto 25px;
     width: 230px;
     text-align: center;
 }
@@ -144,12 +140,16 @@ body {
 
 .partners__link {
     display: inline-block;
+    width: 278px;
     background: transparent;
     color: #ff4e50;
 }
 
-.discover-ideas__grid {
-    margin: 0 auto;
+.discover-ideas__title {
+    margin: 30px 0 20px;
+    padding: 0 10px;
+    text-align: center;
+    font: 700 22px 'Montserrat', sans-serif;
 }
 
 .discover-ideas__grid::after {
@@ -158,17 +158,14 @@ body {
     clear: both;
 }
 
-.grid-sizer {
-    width: 220px;
-}
-
 .discover-ideas__item {
-    margin: 10px 0;
-    width: 200px;
+    display: block;
+    margin-bottom: 10px;
 }
 
 .discover-ideas__img {
-    width: 200px;
+    display: block;
+    margin: 0 auto;
     border: 2px solid grey;
 }
 
@@ -178,12 +175,6 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     color: #fff;
-}
-
-.img {
-    margin: 10px 0;
-    width: 300px;
-    border: 1px solid;
 }
 
 .search-partners {
@@ -197,12 +188,13 @@ body {
 
 .search-partners__subtitle {
     font: 300 18px 'Roboto';
+    color: #666;
 }
 
 .search-partners__input {
     margin: 10px 0;
-    padding: 5px 10px;
-    width: 270px;
+    padding: 4px 15px;
+    width: 250px;
     height: 30px;
     border: 1px solid #aaa;
     border-radius: 5px;
@@ -212,6 +204,7 @@ body {
 
 .search-partners__btn {
     width: 280px;
+    height: 40px;
 }
 
 .footer {
@@ -230,12 +223,13 @@ body {
 
 .footer__nav-item {
     font: 300 14px 'Roboto', sans-serif;
+    color: #666;
 }
 
 .footer__designed-text {
     font: 700 10px 'Montserrat', sans-serif;
     text-transform: uppercase;
-    color: #aaa;
+    color: #ccc;
 }
 
 .footer__designed-logo {
@@ -270,23 +264,44 @@ body {
     .h-it-w {
         margin: 35px 0;
     }
-    .h-it-w__section {
-        width: 300px;
-        height: 240px;
-    }
+    .h-it-w__section,
     .h-it-w__step {
-        margin: 10px auto;
+        margin: 0 auto 10px;
         width: 300px;
         height: 240px;
     }
     .partners__title {
-        padding: 0 50px;
+        padding: 0 10px;
+    }
+    .discover-ideas__grid {
+        max-height: 550px;
+        overflow-y: hidden;
+    }
+    .discover-ideas__item {
+        width: 100%;
+    }
+    .discover-ideas__img {
+        height: 100px;
+    }
+    .search-partners__subtitle {
+        margin: 8px 0 5px;
     }
     .footer__wrap {
         text-align: center;
     }
+    .footer__logo {
+        display: block;
+        margin-top: 15px;
+    }
+    .footer__nav-title {
+        margin: 10px 0 -5px;
+    }
     .footer__nav-item {
         display: inline-block;
+        margin-right: 6px;
+    }
+    .footer__designed {
+        margin-top: 10px;
     }
 }
 
@@ -347,6 +362,9 @@ body {
     }
     .partners__link {
         width: 250px;
+    }
+    .discover-ideas__item {
+        width: 33.333333%;
     }
     .search-partners__input {
         width: 240px;

@@ -2,6 +2,20 @@
     text-align: center;
 }
 
+.footer__logo {
+    display: block;
+    margin-top: 15px;
+}
+
+.footer__nav-title {
+    margin: 10px 0 -5px;
+}
+
 .footer__nav-item {
     display: inline-block;
+    margin-right: 6px;
+}
+
+.footer__designed {
+    margin-top: 10px;
 }

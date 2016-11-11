@@ -1,5 +1,8 @@
-.discover-ideas__grid {
-    margin: 0 auto;
+.discover-ideas__title {
+    margin: 30px 0 20px;
+    padding: 0 10px;
+    text-align: center;
+    @include font-family-Montserrat(700, 22px);
 }
 
 .discover-ideas__grid::after {
@@ -8,17 +11,14 @@
     clear: both;
 }
 
-.grid-sizer {
-    width: 220px;
-}
-
 .discover-ideas__item {
-    margin: 10px 0;
-    width: 200px;
+    display: block;
+    margin-bottom: 10px;
 }
 
 .discover-ideas__img {
-    width: 200px;
+    display: block;
+    margin: 0 auto;
     border: 2px solid grey;
 }
 
@@ -28,10 +28,4 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: $color-white;
-}
-
-.img {
-    margin: 10px 0;
-    width: 300px;
-    border: 1px solid;
 }

@@ -13,7 +13,7 @@ $(function() {
 
     var search = document.getElementById('search');
     var submit = document.getElementById('search-btn');
-    var content = document.getElementById('discover-ideas');
+    var content = document.getElementById('grid');
     var request = new XMLHttpRequest();
 
     var makeRequest = function(tag, callback, limit) {
@@ -40,10 +40,8 @@ $(function() {
             $('.discover-ideas__grid').imagesLoaded( function(){
                 $('.discover-ideas__grid').masonry({
                     itemSelector: '.discover-ideas__item',
-                    columnWidth: '.grid-sizer',
-                    percentPosition: true,
-                    isFitWidth: true,
-                    gutter: 20
+                    columnWidth: '.discover-ideas__item',
+                    percentPosition: true
                 })
             });
         });
