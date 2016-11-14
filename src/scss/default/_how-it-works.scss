@@ -21,15 +21,15 @@
     background-size: cover;
     background-color: #000;
 
-    &.h-it-w__step-1 {
+    &.h-it-w__step_1 {
         background-image: url($image_dir + 'h-it-w-1.jpg');
     }
 
-    &.h-it-w__step-2 {
+    &.h-it-w__step_2 {
         background-image: url($image_dir + 'h-it-w-2.jpg');
     }
 
-    &.h-it-w__step-3 {
+    &.h-it-w__step_3 {
         background-image: url($image_dir + 'h-it-w-3.jpg');
     }
 }

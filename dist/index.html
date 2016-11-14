@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
     <title>Ксения Малиновская</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="stylesheet" href="js/slick/slick.css"/>
+    <link rel="stylesheet" href="js/slick/slick-theme.css"/>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-    <script type="text/javascript" src="slick/slick.min.js"></script>
     <script src="https://unpkg.com/masonry-layout@4.1/dist/masonry.pkgd.min.js"></script>
     <script src="https://unpkg.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+    <script src="js/slick/slick.min.js"></script>
     <script src="js/tmpl.js"></script>
     <script src="js/main.js"></script>
 </head>
@@ -33,8 +32,8 @@
     <div class="h-it-w">
         <h1 class="h-it-w__title wrap">How Urlaubsglück works?</h1>
         <div class="h-it-w__wrap wrap">
-            <ul class="h-it-w__section h-it-w__section-1 jcarousel">
-                <li class="h-it-w__step h-it-w__step-1">
+            <ul id="h-it-w__section-1" class="h-it-w__section">
+                <li class="h-it-w__step h-it-w__step_1">
                     <span class="h-it-w__step-numb btn">STEP 1</span>
                     <h1 class="h-it-w__step-title">
                         Sed leo enim, condimentum
@@ -43,7 +42,7 @@
                         Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.
                     </p>
                 </li>
-                <li class="h-it-w__step h-it-w__step-2">
+                <li class="h-it-w__step h-it-w__step_2">
                     <span class="h-it-w__step-numb btn">STEP 2</span>
                     <h1 class="h-it-w__step-title">
                         Morbi velit risus
@@ -52,7 +51,7 @@
                         Nulla venenatis tempor dui in molestie. Nulla quis dictum purus, sit amet porttitor est.
                     </p>
                 </li>
-                <li class="h-it-w__step h-it-w__step-3">
+                <li class="h-it-w__step h-it-w__step_3">
                     <span class="h-it-w__step-numb btn">STEP 3</span>
                     <h1 class="h-it-w__step-title">
                         Sed leo enim, condimentum
@@ -63,8 +62,8 @@
                 </li>
             </ul>
 
-            <ul class="h-it-w__section h-it-w__section-2 jcarousel">
-                <li class="h-it-w__step h-it-w__step-1">
+            <ul id="h-it-w__section-2" class="h-it-w__section">
+                <li class="h-it-w__step h-it-w__step_1">
                     <span class="h-it-w__step-numb btn">STEP 1</span>
                     <h1 class="h-it-w__step-title">
                         Sed leo enim, condimentum
@@ -73,7 +72,7 @@
                         Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.
                     </p>
                 </li>
-                <li class="h-it-w__step h-it-w__step-2">
+                <li class="h-it-w__step h-it-w__step_2">
                     <span class="h-it-w__step-numb btn">STEP 2</span>
                     <h1 class="h-it-w__step-title">
                         Morbi velit risus
@@ -82,7 +81,7 @@
                         Nulla venenatis tempor dui in molestie. Nulla quis dictum purus, sit amet porttitor est.
                     </p>
                 </li>
-                <li class="h-it-w__step h-it-w__step-3">
+                <li class="h-it-w__step h-it-w__step_3">
                     <span class="h-it-w__step-numb btn">STEP 3</span>
                     <h1 class="h-it-w__step-title">
                         Sed leo enim, condimentum
@@ -93,8 +92,8 @@
                 </li>
             </ul>
 
-            <ul class="h-it-w__section h-it-w__section-3 jcarousel">
-                <li class="h-it-w__step h-it-w__step-1">
+            <ul id="h-it-w__section-3" class="h-it-w__section">
+                <li class="h-it-w__step h-it-w__step_1">
                     <span class="h-it-w__step-numb btn">STEP 1</span>
                     <h1 class="h-it-w__step-title">
                         Sed leo enim, condimentum
@@ -103,7 +102,7 @@
                         Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.
                     </p>
                 </li>
-                <li class="h-it-w__step h-it-w__step-2">
+                <li class="h-it-w__step h-it-w__step_2">
                     <span class="h-it-w__step-numb btn">STEP 2</span>
                     <h1 class="h-it-w__step-title">
                         Morbi velit risus
@@ -112,7 +111,7 @@
                         Nulla venenatis tempor dui in molestie. Nulla quis dictum purus, sit amet porttitor est.
                     </p>
                 </li>
-                <li class="h-it-w__step h-it-w__step-3">
+                <li class="h-it-w__step h-it-w__step_3">
                     <span class="h-it-w__step-numb btn">STEP 3</span>
                     <h1 class="h-it-w__step-title">
                         Sed leo enim, condimentum

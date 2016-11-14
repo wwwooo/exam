@@ -2,14 +2,22 @@
 
 const gulp = require('gulp'),
     sass = require('gulp-sass'),
+    cssmin = require('gulp-cssmin'),
+    uglify = require('gulp-uglify'),
     imagemin = require('gulp-imagemin'),
-    csscomb = require('gulp-csscomb'),
     browserSync = require("browser-sync").create();
 
-gulp.task('sass', function() {
+gulp.task('js:build', function() {
+    return gulp.src('src/js/*.js')
+        .pipe(uglify())
+        .pipe(gulp.dest('dist/js'))
+        .pipe(browserSync.stream());
+});
+
+gulp.task('style:build', function() {
     return gulp.src('src/scss/main.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(csscomb('csscomb.json'))
+        .pipe(cssmin())
         .pipe(gulp.dest('dist/css'))
         .pipe(browserSync.stream());
 });
@@ -21,14 +29,13 @@ gulp.task('imagemin', function() {
         .pipe(browserSync.stream());
 });
 
-gulp.task('serve', ['sass'], function() {
-
+gulp.task('serve', ['style:build'], function() {
     browserSync.init({
         server: "./dist",
         ghostMode: false
     });
 
-    gulp.watch("src/scss/**/*.scss", ['sass']);
+    gulp.watch("src/scss/**/*.scss", ['style:build']);
     gulp.watch("dist/index.html").on('change', browserSync.reload);
 });
 

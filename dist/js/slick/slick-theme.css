@@ -23,16 +23,13 @@
     line-height: 0;
 
     position: absolute;
-    top: 50%;
+    top: 30px;
 
     display: block;
 
     width: 20px;
     height: 20px;
     padding: 0;
-    -webkit-transform: translate(0, -50%);
-    -ms-transform: translate(0, -50%);
-    transform: translate(0, -50%);
 
     cursor: pointer;
 
@@ -82,8 +79,8 @@
     left: 5px;
     width: 35px;
     height: 70px;
-    background: url('../img/arrows.png') 0 50% no-repeat;
-    z-index: 1;
+    background: url('img/arrows.png') 0 50% no-repeat;
+    z-index: 100;
 }
 [dir='rtl'] .slick-prev
 {
@@ -104,8 +101,8 @@
     right: 5px;
     width: 35px;
     height: 70px;
-    background: url('../img/arrows.png') 100% 50% no-repeat;
-    z-index: 1;
+    background: url('img/arrows.png') 100% 50% no-repeat;
+    z-index: 100;
 }
 [dir='rtl'] .slick-next
 {
@@ -115,7 +112,7 @@
 .slick-next:before
 {
     /*content: '→';*/
-    
+
 }
 [dir='rtl'] .slick-next:before
 {
