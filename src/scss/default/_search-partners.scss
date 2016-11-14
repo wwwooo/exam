@@ -17,13 +17,14 @@
     padding: 4px 15px;
     width: 250px;
     height: 30px;
-    border: 1px solid #aaa;
+    border: 1px solid $color-light-grey;
     border-radius: 5px;
-    color: #aaa;
+    color: $color-light-grey;
     font: 300 14px $secondary-font;
 }
 
 .search-partners__btn {
     width: 280px;
     height: 40px;
+    line-height: 14px;
 }

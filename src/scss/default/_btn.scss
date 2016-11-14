@@ -6,9 +6,10 @@
     @include font-family-Montserrat(700, 14px);
     background: $color-pink;
     color: $color-white;
+    opacity: .9;
     cursor: pointer;
 
     &:hover {
-        border: 2px solid $color-white;
+        opacity: 1;
     }
 }

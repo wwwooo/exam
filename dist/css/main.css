@@ -17,14 +17,16 @@ body {
     font: 700 14px 'Montserrat', sans-serif;
     background: #ff4e50;
     color: #fff;
+    opacity: .9;
     cursor: pointer;
 }
 .btn:hover {
-    border: 2px solid #fff;
+    opacity: 1;
 }
 
 .header {
-    background: #000 url('../img/h-bg.jpg') fixed;
+    background: fixed #000 url('../img/h-bg.jpg') 50% 50%;
+    background-size: cover;
     color: #fff;
 }
 
@@ -55,9 +57,6 @@ body {
 
 .header__find-partner {
     display: inline-block;
-}
-.header__find-partner:hover {
-    border-color: #fff;
 }
 
 .h-it-w {
@@ -117,12 +116,44 @@ body {
 }
 
 .partner {
+    position: relative;
     width: 230px;
     text-align: center;
 }
 
 .partner__photo {
     border-radius: 50%;
+}
+
+.partner__shape {
+    position: absolute;
+    top: 86px;
+    right: 52px;
+    width: 40px;
+    height: 40px;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    background: url('../img/partners-sprit.png') no-repeat;
+}
+
+.partner__shape_1 {
+    background-color: #ff4e50;
+    background-position: 8px 7px;
+}
+
+.partner__shape_2 {
+    background-color: #ffa507;
+    background-position: -46px 7px;
+}
+
+.partner__shape_3 {
+    background-color: #1cd7ad;
+    background-position: -21px 6px;
+}
+
+.partner__shape_4 {
+    background-color: #4e73db;
+    background-position: -73px 8px;
 }
 
 .partner__name {
@@ -134,7 +165,7 @@ body {
     width: 230px;
     margin: 0 auto;
     font: 300 14px 'Roboto', sans-serif;
-    color: #ccc;
+    color: #666;
 }
 
 .partners__link {
@@ -165,7 +196,6 @@ body {
 .discover-ideas__img {
     display: block;
     margin: 0 auto;
-    border: 2px solid grey;
 }
 
 .discover-ideas__word {
@@ -195,15 +225,16 @@ body {
     padding: 4px 15px;
     width: 250px;
     height: 30px;
-    border: 1px solid #aaa;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    color: #aaa;
+    color: #ccc;
     font: 300 14px 'Roboto';
 }
 
 .search-partners__btn {
     width: 280px;
     height: 40px;
+    line-height: 14px;
 }
 
 .footer {
@@ -446,6 +477,15 @@ body {
         align-items: center;
         flex-wrap: nowrap;
         height: auto;
+    }
+    .partner_2 {
+        order: 3;
+    }
+    .partner_3 {
+        order: 2;
+    }
+    .partner_4 {
+        order: 4;
     }
     .footer__logo {
         margin-left: 0;

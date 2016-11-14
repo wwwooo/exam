@@ -1,5 +1,6 @@
 .header {
-    background: #000 url($image_dir + 'h-bg.jpg') fixed;
+    background: fixed #000 url($image_dir + 'h-bg.jpg') 50% 50%;
+    background-size: cover;
     color: $color-white;
 }
 
@@ -31,7 +32,4 @@
 
 .header__find-partner {
     display: inline-block;
-    &:hover {
-        border-color: $color-white;
-    }
 }
