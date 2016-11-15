@@ -7,7 +7,6 @@
     margin: 10px auto;
     text-align: center;
     @include font-family-Montserrat(700, 22px);
-    color: #000;
 }
 
 .h-it-w__step {
@@ -19,7 +18,7 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #000;
+    background-color: $color-pink;
 
     &.h-it-w__step_1 {
         background-image: url($image_dir + 'h-it-w-1.jpg');

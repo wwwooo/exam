@@ -34,12 +34,12 @@ $(function() {
         makeRequest(search.value, function(data) {
             content.innerHTML = tmpl('item_tmpl', {data: data.images});
 
-            $('.discover-ideas__grid').imagesLoaded( function(){
+            $('.discover-ideas__grid').imagesLoaded(function() {
                 $('.discover-ideas__grid').masonry({
                     itemSelector: '.discover-ideas__item',
                     columnWidth: '.discover-ideas__item',
                     percentPosition: true
-                })
+                });
             });
         });
     });
