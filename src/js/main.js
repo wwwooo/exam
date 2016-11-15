@@ -1,13 +1,13 @@
 $(function() {
-    $('.h-it-w__section-1').slick({
+    $('#h-it-w__section-1').slick({
         initialSlide: 0
     });
 
-    $('.h-it-w__section-2').slick({
+    $('#h-it-w__section-2').slick({
         initialSlide: 1
     });
 
-    $('.h-it-w__section-3').slick({
+    $('#h-it-w__section-3').slick({
         initialSlide: 2
     });
 
@@ -23,9 +23,6 @@ $(function() {
         request.onreadystatechange = function() {
             if (request.status === 200 && request.readyState === 4) {
                 callback(JSON.parse(request.response));
-                console.log('request \n', request);
-                console.log('respons \n', request.response);
-
             } else if (request.status !== 200) {
                 console.log('false request', request.status);
             }
