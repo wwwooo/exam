@@ -201,8 +201,8 @@
             <div class="discover-ideas__grid">
                 <% for (var i = 0; i < data.length; i++) { %>
                     <div class="discover-ideas__item">
-                        <img class="discover-ideas__img" src=<%= data[i].imageurl %> alt="">
-                        <span class="discover-ideas__word"><%= data[i].word %></span>
+                        <img class="discover-ideas__img" src=<%= data[i].webformatURL %> alt="">
+                        <span class="discover-ideas__word"><%= data[i].tags %></span>
                     </div>
                 <% } %>
             </div>
