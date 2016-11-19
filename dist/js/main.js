@@ -14,70 +14,67 @@ $(function() {
     var search = document.getElementById('search');
     var submit = document.getElementById('search-btn');
     var content = document.getElementById('grid');
-    var requestTag = new XMLHttpRequest();
-    var request = new XMLHttpRequest();
+    var requestTags = new XMLHttpRequest();
+    var requestImg = new XMLHttpRequest();
+    var tags = [];
 
     var getRandomInt = function(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     };
 
-    var randomTag = function(callback) {
-        requestTag.open('GET', 'https://pixabay.com/api/?key=2344285-2757d4dcb4a1174d53dd52d34&per_page=25', false);
-        requestTag.onreadystatechange = function() {
-            if (requestTag.status === 200 && requestTag.readyState === 4) {
-                callback(JSON.parse(requestTag.response));
-                console.log('true requestTag', requestTag.status);
-            } else if (requestTag.status !== 200) {
-                console.log('false requestTag', requestTag.status);
+    var makeRequestTags = function(callback) {
+        requestTags.open('GET', 'https://pixabay.com/api/?key=2344285-2757d4dcb4a1174d53dd52d34&per_page=100', false);
+        requestTags.onreadystatechange = function() {
+            if (requestTags.status === 200 && requestTags.readyState === 4) {
+                callback(JSON.parse(requestTags.response));
+            } else if (requestTags.status !== 200) {
+                console.log('false requestTag', requestTags.status);
             }
         };
-        requestTag.send();
+        requestTags.send();
     };
 
-    var makeRequest = function(tag, callback, limit) {
-        limit = limit || 10;
-        console.log('tag: ' + tag);
-        request.open('GET', 'https://pixabay.com/api/?key=2344285-2757d4dcb4a1174d53dd52d34&q=' + tag + '&per_page=' + limit + '&orientation=vertical');
-        request.onreadystatechange = function() {
-            if (request.status === 200 && request.readyState === 4) {
-                callback(JSON.parse(request.responseText));
-                console.log('true request', request.status);
-            } else if (request.status !== 200) {
-                console.log('false request', request.status);
+    var makeRequestImg = function(tag, callback, limit) {
+        limit = limit || 9;
+        requestImg.open('GET', 'https://pixabay.com/api/?key=2344285-2757d4dcb4a1174d53dd52d34&q=' + tag + '&per_page=' + limit + '&orientation=vertical');
+        requestImg.onreadystatechange = function() {
+            if (requestImg.status === 200 && requestImg.readyState === 4) {
+                callback(JSON.parse(requestImg.responseText));
+            } else if (requestImg.status !== 200) {
+                console.log('false request', requestImg.status);
             }
         };
-        request.send();
+        requestImg.send();
     };
 
     submit.addEventListener('click', function() {
-        console.log('first search.value: ', search.value);
         if (search.value === '') {
-            randomTag(function(data) {
-                var data = data.hits;
-                var str = '';
-                for (var i = 0; i < data.length; i++) {
-                    str += data[i].tags;
-                }
-                var str = str.split(', ');
-                console.log('str: ', str);
-                search.value = str[getRandomInt(0, str.length - 1)];
-                console.log('tag: ', search.value);
-            });
-            console.log('end randomTag request');
+            search.value = tags[getRandomInt(0, tags.length - 1)];
         }
 
-        makeRequest(search.value, function(data) {
-            content.innerHTML = tmpl('item_tmpl', {data: data.hits});
-            search.value = '';
-            $('.discover-ideas__grid').imagesLoaded(function() {
-                $('.discover-ideas__grid').masonry({
-                    itemSelector: '.discover-ideas__item',
-                    columnWidth: '.discover-ideas__item',
-                    percentPosition: true
+        makeRequestImg(search.value, function(data) {
+            if (data.totalHits) {
+                content.innerHTML = tmpl('item_tmpl', {data: data.hits});
+                $('.discover-ideas__grid').imagesLoaded(function() {
+                    $('.discover-ideas__grid').masonry({
+                        itemSelector: '.discover-ideas__item',
+                        columnWidth: '.discover-ideas__item',
+                        percentPosition: true
+                    });
                 });
-            });
-            console.log('end makeRequest\n__________________');
+            } else {
+
+            }
         });
+    });
+
+    makeRequestTags(function(data) {
+        var data = data.hits;
+        var str = '';
+        for (var i = 0; i < data.length; i++) {
+            str += data[i].tags + ', ';
+        }
+        tags = str.split(', ');
     });
 
     submit.dispatchEvent(new Event('click'));

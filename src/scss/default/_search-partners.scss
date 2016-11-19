@@ -19,8 +19,8 @@
     height: 30px;
     border: 1px solid $color-light-grey;
     border-radius: 5px;
-    color: $color-light-grey;
     @include font-family-Roboto(300, 14px);
+    color: #000;
 }
 
 .search-partners__btn {
