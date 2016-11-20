@@ -23,7 +23,7 @@ $(function() {
     };
 
     var makeRequestTags = function(callback) {
-        requestTags.open('GET', 'https://pixabay.com/api/?key=2344285-2757d4dcb4a1174d53dd52d34&per_page=100', false);
+        requestTags.open('GET', 'https://pixabay.com/api/?key=2344285-2757d4dcb4a1174d53dd52d34&per_page=100',false);
         requestTags.onreadystatechange = function() {
             if (requestTags.status === 200 && requestTags.readyState === 4) {
                 callback(JSON.parse(requestTags.response));
@@ -35,7 +35,7 @@ $(function() {
     };
 
     var makeRequestImg = function(tag, callback, limit) {
-        limit = limit || 7;
+        limit = limit || 6;
         requestImg.open('GET', 'https://pixabay.com/api/?key=2344285-2757d4dcb4a1174d53dd52d34&q=' + tag + '&per_page=' + limit + '&orientation=vertical');
         requestImg.onreadystatechange = function() {
             if (requestImg.status === 200 && requestImg.readyState === 4) {
@@ -65,6 +65,12 @@ $(function() {
                 });
             }
         });
+    });
+
+    search.addEventListener('keydown', function(e) {
+        if (e.keyCode === 13) {
+            submit.dispatchEvent(new Event('click'));
+	    }
     });
 
     makeRequestTags(function(data) {
