@@ -3,11 +3,12 @@
 }
 
 .discover-ideas__item {
-    width: 33.33%;
+    margin: .9%;
+    width: 31.33%;
 }
 
 .discover-ideas__img {
     display: block;
     margin: 0 auto;
-    width: 200px;
+    max-width: 100%;
 }
