@@ -1,3 +1,13 @@
+.discover-ideas__item {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
 .discover-ideas__img {
+    position: absolute;
+    top: -100%;
     max-width: 100%;
 }
