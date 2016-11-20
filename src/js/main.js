@@ -54,6 +54,7 @@ $(function() {
 
         makeRequestImg(search.value, function(data) {
             if (data.totalHits) {
+                search.value = '';
                 content.innerHTML = tmpl('item_tmpl', {data: data.hits});
                 $('.discover-ideas__grid').imagesLoaded(function() {
                     $('.discover-ideas__grid').masonry({
@@ -62,8 +63,6 @@ $(function() {
                         percentPosition: true
                     });
                 });
-            } else {
-
             }
         });
     });
